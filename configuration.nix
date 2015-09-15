@@ -10,17 +10,28 @@
       ./hardware-configuration.nix
     ];
 
-  boot.initrd.luks.devices = [
-    { name = "root"; device = "/dev/sda3"; preLVM = true; }
-  ];
-  boot.loader.grub.device = "/dev/sda";
+  boot = {
+    initrd.luks.devices = [
+      {
+        name = "root";
+        device = "/dev/sda3";
+        preLVM = true;
+      }
+    ];
+    loader = {
+      grub.device = "/dev/sda";
+      gummiboot.enable = true;
+      efi.canTouchEfiVariables = true;
+    };
+  };
 
-  # Use the gummiboot efi boot loader.
-  boot.loader.gummiboot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  networking = {
+    # Define your hostname.
+    # hostName = "nixos";
 
-  # networking.hostName = "nixos"; # Define your hostname.
-  networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+    # Enable wireless support via wpa_supplicant.
+    wireless.enable = true;
+  };
 
   # Select internationalisation properties.
   # i18n = {
@@ -37,45 +48,67 @@
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
   environment.systemPackages = with pkgs; [
-    byobu dropbox fish git tmux tree which
 
-    idea."idea-ultimate" jmtpfs
+    # Basic shell stuff
+    byobu curl fish tmux tree wget which xclip
 
-    keepassx synapse wpa_supplicant_gui unclutter xchat xclip
+    # MTP support for mounting Android devices
+    jmtpfs
 
+    # Wireless networking
+    wpa_supplicant_gui
+
+    # Web browsers
     chromium firefox
 
-    curl wget
+    # IRC
+    xchat
 
-    emacs gnome3.gedit sublime3 vim
-
-    gradle leiningen openjdk python ruby
-
+    # Virtualization
     vagrant
+
+    # Editors
+    idea."idea-ultimate" emacs gnome3.gedit sublime3 vim
+
+    # Programming
+    git gradle leiningen openjdk python ruby
+
+    # Password management
+    keepassx
+
+    # GUI Launcher
+    synapse
+
+    # Dropbox GUI
+    dropbox
+
+    # Mouse hiding
+    unclutter
   ];
 
   # List services that you want to enable:
+  services = {
+    # Enable the OpenSSH daemon.
+    # openssh.enable = true;
 
-  # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
+    # Enable CUPS to print documents.
+    # printing.enable = true;
 
-  # Enable CUPS to print documents.
-  # services.printing.enable = true;
-
-  # The X11 windowing system.
-  services.xserver = {
-    enable = true;
-    layout = "us";
-    # xkbOptions = "eurosign:e";
-
-    # Enable the KDE Desktop Environment.
-    # services.xserver.displayManager.kdm.enable = true;
-    desktopManager.kde4.enable = true;
-
-    synaptics = {
+    # The X11 windowing system.
+    xserver = {
       enable = true;
-      tapButtons = false;
-      twoFingerScroll = true;
+      layout = "us";
+      # xkbOptions = "eurosign:e";
+
+      # Enable the KDE Desktop Environment.
+      # displayManager.kdm.enable = true;
+      desktopManager.kde4.enable = true;
+
+      synaptics = {
+        enable = true;
+        tapButtons = false;
+        twoFingerScroll = true;
+      };
     };
   };
 
