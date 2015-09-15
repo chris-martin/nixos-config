@@ -49,6 +49,8 @@
   # $ nix-env -qaP | grep wget
   environment.systemPackages = with pkgs; [
 
+    steam
+
     # Basic shell stuff
     byobu curl fish tmux tree wget which xclip
 
@@ -71,13 +73,20 @@
     idea."idea-ultimate" emacs gnome3.gedit sublime3 vim
 
     # Programming
-    git gradle leiningen openjdk python ruby
+    git gradle leiningen nodejs openjdk ruby
+    python2 python3 python34Packages.pip
+
+    # Databases
+    postgresql redis sqlite
 
     # Password management
     keepassx
 
-    # GUI Launcher
-    synapse
+    # Document/image viewers
+    evince gnome3.eog
+
+    # Video/audio playback
+    gnome3.totem vlc
 
     # Dropbox GUI
     dropbox
