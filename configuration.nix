@@ -27,7 +27,7 @@
 
   networking = {
     # Define your hostname.
-    # hostName = "nixos";
+    hostName = "annemarie";
 
     # Enable wireless support via wpa_supplicant.
     wireless.enable = true;
