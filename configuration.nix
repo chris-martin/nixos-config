@@ -32,20 +32,22 @@
   # Set your time zone.
   time.timeZone = "America/Los_Angeles";
 
+  nixpkgs.config.allowUnfree = true;
+
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
   environment.systemPackages = with pkgs; [
-    byobu dropbox fish git tmux tree
+    byobu dropbox fish git tmux tree which
 
-    jmtpfs
+    idea."idea-ultimate" jmtpfs
 
-    keepassx synapse wpa_supplicant_gui unclutter xchat
+    keepassx synapse wpa_supplicant_gui unclutter xchat xclip
 
     chromium firefox
 
     curl wget
 
-    emacs vim
+    emacs gnome3.gedit sublime3 vim
 
     gradle leiningen openjdk python ruby
 
