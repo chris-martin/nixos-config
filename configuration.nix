@@ -5,10 +5,10 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
+  imports = [
+    # The results of the hardware scan
+    ./hardware-configuration.nix
+  ];
 
   boot = {
     initrd.luks.devices = [
@@ -26,24 +26,31 @@
   };
 
   networking = {
-    # Define your hostname.
     hostName = "annemarie";
-
-    # Enable wireless support via wpa_supplicant.
-    wireless.enable = true;
+    networkmanager.enable = true;
   };
 
   # Select internationalisation properties.
-  # i18n = {
-  #   consoleFont = "Lat2-Terminus16";
-  #   consoleKeyMap = "us";
-  #   defaultLocale = "en_US.UTF-8";
-  # };
+  i18n = {
+    consoleFont = "Lat2-Terminus16";
+    consoleKeyMap = "us";
+    defaultLocale = "en_US.UTF-8";
+  };
 
   # Set your time zone.
   time.timeZone = "America/Los_Angeles";
 
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs.config = {
+
+    allowUnfree = true;
+
+    chromium = {
+      # Chromium's non-NSAPI alternative to Adobe Flash
+      enablePepperFlash = true;
+
+      enablePepperPDF = true;
+    };
+  };
 
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
@@ -51,20 +58,19 @@
 
     steam
 
+    kde4.kmix kde4.networkmanagement
+
     # Basic shell stuff
-    byobu curl fish tmux tree wget which xclip
+    curl fish gptfdisk htop tmux tree wget which xclip
 
-    # MTP support for mounting Android devices
-    jmtpfs
-
-    # Wireless networking
-    wpa_supplicant_gui
+    # Android devices
+    android-udev-rules jmtpfs
 
     # Web browsers
     chromium firefox
 
     # IRC
-    xchat
+    kde4.konversation
 
     # Virtualization
     vagrant
@@ -75,6 +81,7 @@
     # Programming
     git gradle leiningen nodejs openjdk ruby
     python2 python3 python34Packages.pip
+    androidsdk_4_4
 
     # Databases
     postgresql redis sqlite
@@ -97,6 +104,9 @@
 
   # List services that you want to enable:
   services = {
+
+    nixosManual.showManual = true;
+
     # Enable the OpenSSH daemon.
     # openssh.enable = true;
 
@@ -107,29 +117,53 @@
     xserver = {
       enable = true;
       layout = "us";
-      # xkbOptions = "eurosign:e";
 
-      # Enable the KDE Desktop Environment.
-      # displayManager.kdm.enable = true;
+      # KDE Desktop Environment.
       desktopManager.kde4.enable = true;
 
+      # Touchpad
       synaptics = {
         enable = true;
         tapButtons = false;
         twoFingerScroll = true;
+        minSpeed = "0.5";
+        maxSpeed = "4.0";
+        accelFactor = "0.002";
       };
     };
+  };
+
+  # VirtualBox
+  virtualisation.virtualbox.host = {
+    enable = true;
+    enableHardening = false;
+    addNetworkInterface = true;
+  };
+
+  # Fonts
+  fonts = {
+    enableFontDir = true;
+    enableGhostscriptFonts = true;
+    fonts = with pkgs; [
+      corefonts
+      inconsolata
+      ubuntu_font_family
+      vistafonts
+    ];
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.extraUsers.chris = {
     name = "chris";
     group = "users";
-    extraGroups = [ "wheel" "disk" "audio" "video" "networkmanager" "systemd-journal" ];
+    extraGroups = [
+      "audio" "disk" "networkmanager" "systemd-journal"
+      "wheel" "vboxusers" "video"
+    ];
     createHome = true;
     uid = 1000;
     home = "/home/chris";
-    shell = "/run/current-system/sw/bin/fish";
+    shell = "/run/current-system/sw/bin/bash";
   };
 
   # The NixOS release to be compatible with for stateful data such as databases.
