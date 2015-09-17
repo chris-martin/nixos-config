@@ -93,7 +93,7 @@
     evince gnome3.eog
 
     # Video/audio playback
-    gnome3.totem vlc
+    gnome3.totem kde4.dragon vlc
 
     # Dropbox GUI
     dropbox
