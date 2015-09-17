@@ -79,9 +79,9 @@
     idea."idea-ultimate" emacs gnome3.gedit sublime3 vim
 
     # Programming
-    git gradle leiningen nodejs openjdk ruby
-    python2 python3 python34Packages.pip
-    androidsdk_4_4
+    git gradle leiningen nodejs openjdk ruby scala
+    python27Full python3 python34Packages.pip
+    androidsdk_4_4 stdenv gcc
 
     # Databases
     postgresql redis sqlite
