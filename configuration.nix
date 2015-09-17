@@ -126,9 +126,9 @@
         enable = true;
         tapButtons = false;
         twoFingerScroll = true;
-        minSpeed = "0.5";
-        maxSpeed = "4.0";
-        accelFactor = "0.002";
+        minSpeed = "0.8";
+        maxSpeed = "5.5";
+        accelFactor = "0.015";
       };
     };
   };
