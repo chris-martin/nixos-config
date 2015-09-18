@@ -131,6 +131,17 @@
         minSpeed = "0.8";
         maxSpeed = "5.5";
         accelFactor = "0.015";
+        palmDetect = true;
+
+        # Left edge is adjusted because palm detection isn't good
+        # enough on the edges. This touchpad is off-center and my
+        # left palm tends to graze it.
+        additionalOptions = ''
+          Option "PalmMinWidth" "3"
+          Option "AreaLeftEdge" "500"
+          Option "VertScrollDelta" "65"
+          Option "HorizScrollDelta" "65"
+        '';
       };
     };
   };
