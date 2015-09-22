@@ -73,10 +73,18 @@
 
     steam
 
-    kde4.kmix kde4.networkmanagement
+    baobab
+
+    nmap nmap_graphical
+
+    # Archive files
+    zip unzip kde4.ark
 
     # Basic shell stuff
     curl fish gptfdisk htop tmux tree wget which xclip
+
+    # Networking
+    kde4.networkmanagement
 
     # Android devices
     android-udev-rules jmtpfs
@@ -94,8 +102,8 @@
     idea."idea-ultimate" emacs gnome3.gedit sublime3 vim
 
     # Programming
-    gitAndTools.gitFull gradle leiningen nodejs openjdk ruby scala
-    androidsdk_4_4 stdenv gcc
+    gitAndTools.gitFull gradle leiningen nodejs openjdk oraclejre8 ruby scala
+    androidsdk_4_4 stdenv gcc gnumake chromedriver
 
     # Python
     python27Full python3 python34Packages.pip pypyPackages.virtualenv
@@ -109,8 +117,8 @@
     # Document/image viewers
     evince gnome3.eog
 
-    # Video/audio playback
-    gnome3.totem kde4.dragon vlc
+    # Video/audio
+    gnome3.totem kde4.dragon vlc kde4.kmix
 
     # Dropbox GUI
     dropbox
