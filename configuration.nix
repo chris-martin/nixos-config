@@ -8,6 +8,9 @@
   imports = [
     # The results of the hardware scan
     ./hardware-configuration.nix
+
+    # Anything else not version-controlled
+    ./secret.nix
   ];
 
   boot = {
