@@ -193,8 +193,8 @@
     name = "chris";
     group = "users";
     extraGroups = [
-      "audio" "disk" "networkmanager" "systemd-journal"
-      "wheel" "vboxusers" "video"
+      "audio" "disk" "networkmanager" "plugdev"
+      "systemd-journal" "wheel" "vboxusers" "video"
     ];
     createHome = true;
     uid = 1000;
