@@ -56,6 +56,15 @@
 
       enablePepperPDF = true;
     };
+
+    packageOverrides = pkgs: rec {
+
+      # Minecraft crashes on OpenJDK
+      minecraft = pkgs.minecraft.override {
+        jre = pkgs.oraclejre8;
+      };
+
+    };
   };
 
   # List packages installed in system profile. To search by name, run:
