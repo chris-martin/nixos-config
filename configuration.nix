@@ -13,6 +13,9 @@
     ./secret.nix
   ];
 
+  # Needed for Steam
+  hardware.opengl.driSupport32Bit = true;
+
   boot = {
     initrd.luks.devices = [
       {
