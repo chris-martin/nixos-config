@@ -76,6 +76,7 @@
 
     baobab
 
+    kde4.print_manager
 
     # Archive files
     zip unzip kde4.ark
@@ -140,7 +141,7 @@
     # openssh.enable = true;
 
     # Enable CUPS to print documents.
-    # printing.enable = true;
+    printing.enable = true;
 
     # The X11 windowing system.
     xserver = {
