@@ -110,8 +110,13 @@
     idea."idea-ultimate" emacs gnome3.gedit sublime3 vim
 
     # Programming
-    gitAndTools.gitFull gradle leiningen nodejs openjdk openjdk7_jdk oraclejre8 ruby scala
-    androidsdk_4_4 stdenv gcc gnumake chromedriver leiningen
+    gitAndTools.gitFull nodejs androidsdk_4_4 stdenv gcc gnumake chromedriver
+
+    # JVM
+    openjdk openjdk7_jdk oraclejre8 scala gradle leiningen
+
+    # Ruby
+    ruby bundler
 
     # Python
     python27Full python3 python34Packages.pip pypyPackages.virtualenv
