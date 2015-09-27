@@ -16,6 +16,8 @@
   # Needed for Steam
   hardware.opengl.driSupport32Bit = true;
 
+  hardware.bluetooth.enable = true;
+
   boot = {
     initrd.luks.devices = [
       {
@@ -64,6 +66,7 @@
         jre = pkgs.oraclejre8;
       };
 
+      bluez = pkgs.bluez5;
     };
   };
 
