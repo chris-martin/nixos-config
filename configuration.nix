@@ -74,8 +74,6 @@
   # $ nix-env -qaP | grep wget
   environment.systemPackages = with pkgs; [
 
-    steam
-
     baobab
 
     nmap nmap_graphical
@@ -122,6 +120,9 @@
 
     # Video/audio
     gnome3.totem kde4.dragon vlc kde4.kmix
+
+    # Gaming
+    steam minecraft
 
     # Dropbox GUI
     dropbox
