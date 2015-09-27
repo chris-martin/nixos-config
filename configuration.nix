@@ -189,6 +189,7 @@
       corefonts
       inconsolata
       ubuntu_font_family
+      unifont
       vistafonts
     ];
   };
