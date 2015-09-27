@@ -70,6 +70,10 @@
     };
   };
 
+  environment.etc."fuse.conf".text = ''
+    user_allow_other
+  '';
+
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
   environment.systemPackages = with pkgs; [
@@ -77,6 +81,8 @@
     baobab
 
     kde4.print_manager
+
+    sshfsFuse
 
     # Archive files
     zip unzip kde4.ark
