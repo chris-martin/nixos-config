@@ -76,7 +76,6 @@
 
     baobab
 
-    nmap nmap_graphical
 
     # Archive files
     zip unzip kde4.ark
@@ -86,6 +85,7 @@
 
     # Networking
     kde4.networkmanagement
+    nmap nmap_graphical
 
     # Android devices
     android-udev-rules jmtpfs
