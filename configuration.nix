@@ -93,6 +93,12 @@
 
     sshfsFuse
 
+    truecrypt
+
+    scrot
+
+    #samba
+
     # Archive files
     zip unzip kde4.ark
 
