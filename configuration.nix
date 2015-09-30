@@ -203,6 +203,27 @@
         '';
       };
     };
+
+    #samba = {
+    #  enable = true;
+    #  shares = {
+    #    chris = {
+    #      path = "/home/chris/samba";
+    #      "read only" = "yes";
+    #      browseable = "yes";
+    #      "guest ok" = "no";
+    #      "valid users" = "chris";
+    #      "follow symlinks" = "yes";
+    #      "wide links" = "yes";
+    #    };
+    #  };
+    #  extraConfig = ''
+    #    unix extensions = no
+    #    guest account = nobody
+    #    map to guest = bad user
+    #  '';
+    #};
+
   };
 
   # VirtualBox
