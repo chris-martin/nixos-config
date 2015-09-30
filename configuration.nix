@@ -125,10 +125,13 @@
     idea."idea-ultimate" emacs gnome3.gedit sublime3 vim
 
     # Programming
-    gitAndTools.gitFull nodejs androidsdk_4_4 stdenv gcc gnumake chromedriver
+    gitAndTools.gitFull nodejs androidsdk_4_4 chromedriver
+
+    # C stuff and whatnot
+    stdenv gcc gnumake automake autoconf
 
     # JVM
-    openjdk openjdk7_jdk oraclejre8 scala gradle leiningen
+    openjdk7 openjdk8 oraclejre8 scala gradle leiningen
 
     # Ruby
     ruby bundler
