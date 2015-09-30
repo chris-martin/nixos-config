@@ -119,7 +119,7 @@
     kde4.konversation
 
     # Virtualization
-    vagrant
+    vagrant otto
 
     # Editors
     idea."idea-ultimate" emacs gnome3.gedit sublime3 vim
@@ -236,6 +236,13 @@
     home = "/home/chris";
     shell = "/run/current-system/sw/bin/bash";
   };
+
+  # Needed for otto :(
+  # See https://github.com/NixOS/patchelf/issues/68
+  system.activationScripts.globalLinker = ''
+    mkdir -p /lib64
+    ln -sf $(cat ${pkgs.stdenv.cc}/nix-support/dynamic-linker) /lib64/ld-linux-x86-64.so.2
+  '';
 
   # The NixOS release to be compatible with for stateful data such as databases.
   system.stateVersion = "15.09";
