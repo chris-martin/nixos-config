@@ -36,6 +36,15 @@
   networking = {
     hostName = "annemarie";
     networkmanager.enable = true;
+
+    firewall = {
+
+      # Samba
+      #allowedTCPPorts = [ 445 139 ];
+      #allowedUDPPorts = [ 137 138 ];
+
+      allowPing = true;
+    };
   };
 
   # Select internationalisation properties.
