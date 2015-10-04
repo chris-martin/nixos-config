@@ -12,10 +12,19 @@
     ./secret.nix
   ];
 
-  # Needed for Steam
-  hardware.opengl.driSupport32Bit = true;
+  hardware = {
+    # Needed for Steam
+    opengl.driSupport32Bit = true;
 
-  hardware.bluetooth.enable = true;
+    pulseaudio = {
+      #enable = true;
+
+      # Needed for Steam
+      support32Bit = true;
+    };
+
+    bluetooth.enable = true;
+  };
 
   boot = {
     initrd.luks.devices = [
