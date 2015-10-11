@@ -126,8 +126,8 @@
     # IRC
     kde4.konversation
 
-    # Virtualization
-    vagrant otto
+    # Virtualization and containers
+    vagrant otto docker python27Packages.docker_compose
 
     # Editors
     idea."idea-ultimate" emacs gnome3.gedit sublime3 vim
@@ -234,11 +234,20 @@
 
   };
 
-  # VirtualBox
-  virtualisation.virtualbox.host = {
-    enable = true;
-    enableHardening = false;
-    addNetworkInterface = true;
+  virtualisation = {
+
+    # VirtualBox
+    virtualbox.host = {
+      enable = true;
+      enableHardening = false;
+      addNetworkInterface = true;
+    };
+
+    # Docker
+    docker = {
+      enable = true;
+      storageDriver = "devicemapper";
+    };
   };
 
   # Fonts
@@ -259,7 +268,7 @@
     name = "chris";
     group = "users";
     extraGroups = [
-      "audio" "disk" "networkmanager" "plugdev"
+      "audio" "disk" "docker" "networkmanager" "plugdev"
       "systemd-journal" "wheel" "vboxusers" "video"
     ];
     createHome = true;
