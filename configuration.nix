@@ -95,7 +95,8 @@
   # $ nix-env -qaP | grep wget
   environment.systemPackages = with pkgs; [
 
-    baobab
+    # Disk usage analysis
+    baobab ncdu
 
     kde4.print_manager
 
