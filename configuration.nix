@@ -150,8 +150,8 @@
     # Python
     python27Full python3 python34Packages.pip pypyPackages.virtualenv
 
-    # Databases
-    postgresql redis sqlite
+    # Databases and such
+    postgresql rabbitmq_server redis sqlite
 
     # Password management
     keepassx
