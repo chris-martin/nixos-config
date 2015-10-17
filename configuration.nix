@@ -117,7 +117,7 @@
     zip unzip kde4.ark
 
     # Basic shell stuff
-    curl fish gptfdisk htop tmux tree wget which xclip
+    curl fish gptfdisk htop lsof tmux tree wget which xclip
 
     # Networking
     kde4.networkmanagement
