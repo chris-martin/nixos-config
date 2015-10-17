@@ -96,6 +96,8 @@
   # $ nix-env -qaP | grep wget
   environment.systemPackages = with pkgs; [
 
+    skype
+
     nix-repl
 
     # Disk usage analysis
