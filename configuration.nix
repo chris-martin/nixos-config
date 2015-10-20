@@ -122,6 +122,7 @@
     # Networking
     kde4.networkmanagement
     nmap nmap_graphical
+    aircrackng reaverwps
 
     # Android devices
     android-udev-rules jmtpfs
