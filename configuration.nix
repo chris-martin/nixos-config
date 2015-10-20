@@ -187,8 +187,11 @@
     # Enable the OpenSSH daemon.
     # openssh.enable = true;
 
-    # Enable CUPS to print documents.
-    printing.enable = true;
+    # Printing
+    printing = {
+      enable = true;
+      drivers = [ pkgs.gutenprint pkgs.hplipWithPlugin ];
+    };
 
     # The X11 windowing system.
     xserver = {
