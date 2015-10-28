@@ -111,6 +111,8 @@
 
     scrot
 
+    meld
+
     #samba
 
     # Archive files
