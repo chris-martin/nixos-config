@@ -135,11 +135,13 @@
     # IRC
     kde4.konversation
 
+    parse
+
     # Virtualization and containers
     vagrant otto docker python27Packages.docker_compose
 
     # Editors
-    idea."idea-ultimate" emacs gnome3.gedit sublime3 vim
+    idea."idea-ultimate" emacs gnome3.gedit sublime3 vim atom
 
     # Programming
     gitAndTools.gitFull nodejs androidsdk_4_4 chromedriver
