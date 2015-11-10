@@ -283,6 +283,7 @@
     fonts = with pkgs; [
       corefonts
       inconsolata
+      symbola
       ubuntu_font_family
       unifont
       vistafonts
