@@ -161,6 +161,9 @@
     # JVM
     openjdk8 oraclejre8 scala sbt gradle leiningen maven
 
+    # Elixir/Erlang
+    elixir rebar
+
     # Ruby
     ruby bundler
 
