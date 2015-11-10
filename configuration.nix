@@ -75,6 +75,8 @@
       enablePepperFlash = true;
 
       enablePepperPDF = true;
+
+      enableWideVine = true;
     };
 
     packageOverrides = pkgs: rec {
