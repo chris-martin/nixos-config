@@ -159,7 +159,7 @@
     stdenv gcc gnumake automake autoconf
 
     # JVM
-    openjdk7 openjdk8 oraclejre8 scala sbt gradle leiningen maven
+    openjdk8 oraclejre8 scala sbt gradle leiningen maven
 
     # Ruby
     ruby bundler
