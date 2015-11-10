@@ -139,6 +139,8 @@
 
     parse
 
+    bridge-utils
+
     # Virtualization and containers
     vagrant otto docker python27Packages.docker_compose
 
