@@ -137,8 +137,6 @@
     # IRC
     kde4.konversation
 
-    parse
-
     bridge-utils
 
     # Virtualization and containers
