@@ -148,6 +148,13 @@
     # Programming
     gitAndTools.gitFull nodejs androidsdk_4_4 chromedriver
 
+    haskellPackages.cabal-install
+    haskellPackages.ghc
+    #haskellPackages.ghc-mod
+    #haskellPackages.hlint
+    #haskellPackages.stack
+    #haskellPackages.stylish-haskell
+
     # C stuff and whatnot
     stdenv gcc gnumake automake autoconf
 
