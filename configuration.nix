@@ -180,7 +180,7 @@
     evince gnome3.eog
 
     # Image editing
-    gimp inkscape imagemagick
+    gimp inkscape imagemagick kde4.kcolorchooser
 
     # Video/audio
     gnome3.totem kde4.dragon vlc kde4.kmix
