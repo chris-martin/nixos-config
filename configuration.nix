@@ -63,8 +63,8 @@
   };
 
   # Set your time zone.
-  #time.timeZone = "America/Los_Angeles";
-  time.timeZone = "America/New_York";
+  time.timeZone = "America/Los_Angeles";
+  #time.timeZone = "America/New_York";
 
   nixpkgs.config = {
 
