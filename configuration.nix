@@ -98,6 +98,8 @@
   # $ nix-env -qaP | grep wget
   environment.systemPackages = with pkgs; [
 
+    openssl
+
     skype
 
     nix-repl
