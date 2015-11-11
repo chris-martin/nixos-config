@@ -240,6 +240,14 @@
       };
     };
 
+    redshift = {
+      enable = true;
+
+      # San Mateo
+      latitude = "37.56";
+      longitude = "-122.33";
+    };
+
     #samba = {
     #  enable = true;
     #  shares = {
