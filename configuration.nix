@@ -123,7 +123,7 @@
     zip unzip kde4.ark
 
     # Basic shell stuff
-    curl fish gptfdisk htop jq lsof psmisc tmux tree wget which xclip
+    curl fish gptfdisk htop jq lsof man_db psmisc tmux tree wget which xclip
 
     # Networking
     kde4.networkmanagement
