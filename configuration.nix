@@ -195,6 +195,8 @@
 
     # Mouse hiding
     unclutter
+
+    xorg.xkill
   ];
 
   # List services that you want to enable:
