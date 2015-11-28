@@ -226,7 +226,7 @@
         enable = true;
         tapButtons = false;
         twoFingerScroll = true;
-        minSpeed = "0.8";
+        minSpeed = "0.75";
         maxSpeed = "5.5";
         accelFactor = "0.015";
         palmDetect = true;
@@ -237,7 +237,7 @@
         # enough on the edges. This touchpad is off-center and my
         # left palm tends to graze it.
         additionalOptions = ''
-          Option "AreaLeftEdge" "500"
+          Option "AreaLeftEdge" "450"
         '';
       };
     };
