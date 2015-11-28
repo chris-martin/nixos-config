@@ -193,9 +193,6 @@
     # Gaming
     steam minecraft
 
-    # Dropbox GUI
-    dropbox
-
     # Mouse hiding
     unclutter
   ];
