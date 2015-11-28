@@ -179,7 +179,7 @@
     postgresql rabbitmq_server redis sqlite
 
     # Password management
-    keepassx
+    keepassx2
 
     # Document/image viewers
     evince gnome3.eog
