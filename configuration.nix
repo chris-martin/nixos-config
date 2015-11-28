@@ -144,6 +144,9 @@
     # Virtualization and containers
     vagrant otto docker python27Packages.docker_compose
 
+    # AWS
+    awscli
+
     # Editors
     idea."idea-ultimate" emacs sublime3 vim atom
 
