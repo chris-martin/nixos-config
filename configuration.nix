@@ -191,6 +191,9 @@
     # Image editing
     gimp inkscape imagemagick kde4.kcolorchooser
 
+    # OCR
+    tesseract
+
     # Video/audio
     gnome3.totem kde4.dragon vlc kde4.kmix
 
