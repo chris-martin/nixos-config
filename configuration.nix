@@ -175,7 +175,9 @@
     ruby bundler
 
     # Python
-    python27Full python3 python34Packages.pip pypyPackages.virtualenv
+    python27Full python3
+    python34Packages.pip
+    pypyPackages.virtualenv
 
     # Databases and such
     postgresql rabbitmq_server redis sqlite
