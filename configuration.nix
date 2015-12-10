@@ -115,7 +115,7 @@
 
     truecrypt
 
-    scrot
+    scrot gnome3.gnome-screenshot
 
     meld
 
