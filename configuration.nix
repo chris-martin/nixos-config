@@ -146,7 +146,7 @@
     bridge-utils
 
     # Virtualization and containers
-    vagrant otto docker python27Packages.docker_compose
+    vagrant docker python27Packages.docker_compose
 
     # AWS
     awscli
