@@ -83,10 +83,10 @@
 
     packageOverrides = pkgs: rec {
 
-      # Minecraft crashes on OpenJDK
-      minecraft = pkgs.minecraft.override {
-        jre = pkgs.oraclejre8;
-      };
+      # Minecraft seems to crash more often on OpenJDK more often
+      #minecraft = pkgs.minecraft.override {
+      #  jre = pkgs.oraclejre8;
+      #};
 
       bluez = pkgs.bluez5;
     };
@@ -166,7 +166,7 @@
     stdenv gcc gnumake automake autoconf
 
     # JVM
-    openjdk8 oraclejre8 scala sbt gradle leiningen maven
+    openjdk8 scala sbt gradle leiningen maven # oraclejre8
 
     # Elixir/Erlang
     elixir rebar
