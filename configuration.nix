@@ -138,7 +138,7 @@
     android-udev-rules jmtpfs
 
     # Web browsers
-    chromium firefox
+    chromium # firefox
 
     # IRC
     kde4.konversation
