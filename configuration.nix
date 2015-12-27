@@ -152,7 +152,7 @@
     awscli
 
     # Editors
-    idea."idea-ultimate" emacs sublime3 vim atom
+    idea."idea-ultimate" emacs vim # atom sublime3
 
     # Programming
     gitAndTools.gitFull nodejs androidsdk_4_4 chromedriver
