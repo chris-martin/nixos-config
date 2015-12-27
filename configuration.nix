@@ -197,7 +197,7 @@
     tesseract
 
     # Video/audio
-    gnome3.totem kde4.dragon vlc kde4.kmix
+    gnome3.totem kde4.dragon vlc kde4.kmix ffmpeg
 
     # Gaming
     steam minecraft
