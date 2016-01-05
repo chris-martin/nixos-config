@@ -179,6 +179,7 @@
     # Python
     python27Full python3
     python34Packages.pip
+    python34Packages.ipython
     pypyPackages.virtualenv
 
     # Databases and such
