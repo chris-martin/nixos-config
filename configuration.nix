@@ -13,15 +13,10 @@
   ];
 
   hardware = {
+
     # Needed for Steam
     opengl.driSupport32Bit = true;
-
-    pulseaudio = {
-      #enable = true;
-
-      # Needed for Steam
-      support32Bit = true;
-    };
+    pulseaudio.support32Bit = true;
 
     bluetooth.enable = true;
   };
@@ -73,12 +68,6 @@
     };
 
     packageOverrides = pkgs: rec {
-
-      # Minecraft seems to crash more often on OpenJDK more often
-      #minecraft = pkgs.minecraft.override {
-      #  jre = pkgs.oraclejre8;
-      #};
-
       bluez = pkgs.bluez5;
     };
   };
@@ -110,6 +99,7 @@
 
     truecrypt
 
+    # Screenshots
     scrot gnome3.gnome-screenshot
 
     meld
@@ -148,12 +138,8 @@
     # Programming
     gitAndTools.gitFull nodejs androidsdk_4_4 chromedriver
 
-    haskellPackages.cabal-install
-    haskellPackages.ghc
-    #haskellPackages.ghc-mod
-    #haskellPackages.hlint
-    #haskellPackages.stack
-    #haskellPackages.stylish-haskell
+    # Haskell
+    haskellPackages.cabal-install haskellPackages.ghc
 
     # C stuff and whatnot
     stdenv gcc gnumake automake autoconf
@@ -200,13 +186,9 @@
     xorg.xkill
   ];
 
-  # List services that you want to enable:
   services = {
 
     nixosManual.showManual = true;
-
-    # Enable the OpenSSH daemon.
-    # openssh.enable = true;
 
     # Printing
     printing = {
