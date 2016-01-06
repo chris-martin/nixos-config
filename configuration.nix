@@ -111,6 +111,8 @@
     # Disk usage analysis
     baobab ncdu
 
+    gparted
+
     kde4.print_manager
 
     sshfsFuse
