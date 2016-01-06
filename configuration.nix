@@ -44,17 +44,8 @@
   networking = {
     hostName = "annemarie";
     networkmanager.enable = true;
-
     nameservers = [ "8.8.8.8" "8.8.4.4" ];
-
-    firewall = {
-
-      # Samba
-      #allowedTCPPorts = [ 445 139 ];
-      #allowedUDPPorts = [ 137 138 ];
-
-      allowPing = true;
-    };
+    firewall.allowPing = true;
   };
 
   # Select internationalisation properties.
@@ -122,8 +113,6 @@
     scrot gnome3.gnome-screenshot
 
     meld
-
-    #samba
 
     # Archive files
     zip unzip kde4.ark
@@ -261,27 +250,6 @@
       latitude = "37.56";
       longitude = "-122.33";
     };
-
-    #samba = {
-    #  enable = true;
-    #  shares = {
-    #    chris = {
-    #      path = "/home/chris/samba";
-    #      "read only" = "yes";
-    #      browseable = "yes";
-    #      "guest ok" = "no";
-    #      "valid users" = "chris";
-    #      "follow symlinks" = "yes";
-    #      "wide links" = "yes";
-    #    };
-    #  };
-    #  extraConfig = ''
-    #    unix extensions = no
-    #    guest account = nobody
-    #    map to guest = bad user
-    #  '';
-    #};
-
   };
 
   virtualisation = {
