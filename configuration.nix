@@ -328,13 +328,6 @@
     shell = "/run/current-system/sw/bin/bash";
   };
 
-  # Needed for otto :(
-  # See https://github.com/NixOS/patchelf/issues/68
-  system.activationScripts.globalLinker = ''
-    mkdir -p /lib64
-    ln -sf $(cat ${pkgs.stdenv.cc}/nix-support/dynamic-linker) /lib64/ld-linux-x86-64.so.2
-  '';
-
   services.udev.extraRules = ''
     KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="1050", ATTRS{idProduct}=="0113|0114|0115|0116|0120|0402|0403|0406|0407|0410", TAG+="uaccess"
   '';
