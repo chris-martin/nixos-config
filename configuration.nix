@@ -39,6 +39,7 @@
     networkmanager.enable = true;
     nameservers = [ "8.8.8.8" "8.8.4.4" ];
     firewall.allowPing = true;
+    #firewall.allowedTCPPorts = [ 8080 ];
   };
 
   # Select internationalisation properties.
