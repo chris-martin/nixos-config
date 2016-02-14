@@ -226,6 +226,8 @@
       latitude = "37.56";
       longitude = "-122.33";
     };
+
+    unclutter.enable = true;
   };
 
   virtualisation = {
