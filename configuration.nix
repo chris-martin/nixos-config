@@ -287,4 +287,9 @@
   # The NixOS release to be compatible with for stateful data such as databases.
   system.stateVersion = "15.09";
 
+  # https://stackoverflow.com/questions/33180784
+  nix.extraOptions = ''
+    binary-caches-parallel-connections = 25
+  '';
+
 }
