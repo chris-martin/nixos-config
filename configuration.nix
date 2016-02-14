@@ -156,9 +156,6 @@
     # JS
     nodejs nodePackages.grunt-cli nodePackages.bower
 
-    # Databases and such
-    postgresql rabbitmq_server redis sqlite
-
     # Password management
     keepassx2
 
