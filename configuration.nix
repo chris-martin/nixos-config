@@ -124,7 +124,7 @@
     docker python27Packages.docker_compose
 
     # AWS
-    awscli
+    awscli packer
 
     # Editors
     idea."idea-ultimate" emacs vim # atom sublime3
