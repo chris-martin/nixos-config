@@ -130,7 +130,7 @@
     idea."idea-ultimate" emacs vim # atom sublime3
 
     # Programming
-    gitAndTools.gitFull nodejs # androidsdk_4_4 chromedriver
+    gitAndTools.gitFull # androidsdk_4_4 chromedriver
 
     # Haskell
     haskellPackages.cabal-install haskellPackages.ghc
@@ -152,6 +152,9 @@
     python34Packages.pip
     python34Packages.ipython
     pypyPackages.virtualenv
+
+    # JS
+    nodejs nodePackages.grunt-cli nodePackages.bower
 
     # Databases and such
     postgresql rabbitmq_server redis sqlite
