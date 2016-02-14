@@ -17,8 +17,6 @@
     # Needed for Steam
     opengl.driSupport32Bit = true;
     pulseaudio.support32Bit = true;
-
-    bluetooth.enable = true;
   };
 
   boot = {
@@ -65,10 +63,6 @@
       enablePepperPDF = true;
 
       enableWideVine = true;
-    };
-
-    packageOverrides = pkgs: rec {
-      bluez = pkgs.bluez5;
     };
   };
 
