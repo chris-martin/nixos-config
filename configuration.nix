@@ -139,7 +139,7 @@
     stdenv gcc gnumake automake autoconf
 
     # JVM
-    openjdk8 scala sbt gradle leiningen maven # oraclejre8
+    openjdk8 scala sbt gradle ant leiningen maven # oraclejre8
 
     # Elixir/Erlang
     elixir rebar
