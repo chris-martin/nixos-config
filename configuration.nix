@@ -130,7 +130,7 @@
     idea."idea-ultimate" emacs vim # atom sublime3
 
     # Programming
-    gitAndTools.gitFull nodejs androidsdk_4_4 chromedriver
+    gitAndTools.gitFull nodejs # androidsdk_4_4 chromedriver
 
     # Haskell
     haskellPackages.cabal-install haskellPackages.ghc
